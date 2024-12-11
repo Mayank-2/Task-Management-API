@@ -35,7 +35,85 @@
 					]
 				}
 			},
-			"response": []
+			"response": [
+				{
+					"name": "response",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\": \"user@example.com\",\r\n      \"name\" : \"Example\",\r\n      \"contact\" : 7854125487,\r\n      \"password\": \"password123\",\r\n      \"password2\": \"password123\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8000/account/api/auth/register",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"account",
+								"api",
+								"auth",
+								"register"
+							]
+						}
+					},
+					"status": "Created",
+					"code": 201,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Wed, 11 Dec 2024 10:09:23 GMT"
+						},
+						{
+							"key": "Server",
+							"value": "WSGIServer/0.2 CPython/3.11.5"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Allow",
+							"value": "POST, OPTIONS"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "DENY"
+						},
+						{
+							"key": "Content-Length",
+							"value": "34"
+						},
+						{
+							"key": "Vary",
+							"value": "origin"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "Referrer-Policy",
+							"value": "same-origin"
+						},
+						{
+							"key": "Cross-Origin-Opener-Policy",
+							"value": "same-origin"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"msg\": \"Registration Successful\"\n}"
+				}
+			]
 		},
 		{
 			"name": "Login User",
@@ -66,7 +144,97 @@
 					]
 				}
 			},
-			"response": []
+			"response": [
+				{
+					"name": "response",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n      \"email\": \"user@example.com\",\r\n      \"password\": \"password123\"\r\n  }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8000/account/api/auth/login",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"account",
+								"api",
+								"auth",
+								"login"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Wed, 11 Dec 2024 10:31:00 GMT"
+						},
+						{
+							"key": "Server",
+							"value": "WSGIServer/0.2 CPython/3.11.5"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Allow",
+							"value": "POST, OPTIONS"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "DENY"
+						},
+						{
+							"key": "Vary",
+							"value": "Cookie, origin"
+						},
+						{
+							"key": "Content-Length",
+							"value": "129"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "Referrer-Policy",
+							"value": "same-origin"
+						},
+						{
+							"key": "Cross-Origin-Opener-Policy",
+							"value": "same-origin"
+						},
+						{
+							"key": "Set-Cookie",
+							"value": "authToken_user=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzMzOTE2NjYwLCJpYXQiOjE3MzM5MTMwNjAsImp0aSI6ImFlYmNiNWQ4N2RmOTQ1MTQ5NDZiNTA2OGYwNGNlMzA2IiwidXNlcl9pZCI6ImU4YTNjMWNmLTIyMTYtNDkyNC05ZDc5LWYyODlhZjI2MDM1MiJ9.8p2Nauaay8WdfwFuA1gb8wy1uRPm-I7Bvjtd-t8yz3E; expires=1:00:00; HttpOnly; Path=/; SameSite=Lax"
+						},
+						{
+							"key": "Set-Cookie",
+							"value": "authToken_refresh_user=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoicmVmcmVzaCIsImV4cCI6MTczMzk5OTQ2MCwiaWF0IjoxNzMzOTEzMDYwLCJqdGkiOiI2OWE2YzY2MzU5Mjk0NTQ5ODUxZDIwMzE5MWMxYjg0YiIsInVzZXJfaWQiOiJlOGEzYzFjZi0yMjE2LTQ5MjQtOWQ3OS1mMjg5YWYyNjAzNTIifQ.GQVAh7Qkny53qh6PkVAoq9huWulDoBNfimvxhCAt0bU; expires=1 day, 0:00:00; HttpOnly; Path=/; SameSite=Lax"
+						},
+						{
+							"key": "Set-Cookie",
+							"value": "csrftoken=iaKz8E1mFaQS13aMi9Jrvgt6BbQWhfAv; expires=Wed, 10 Dec 2025 10:31:00 GMT; Max-Age=31449600; Path=/; SameSite=Lax"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"data\": {\n        \"id\": \"e8a3c1cf-2216-4924-9d79-f289af260352\",\n        \"name\": \"Example\",\n        \"email\": \"user@example.com\",\n        \"contact\": \"7854125487\"\n    }\n}"
+				}
+			]
 		},
 		{
 			"name": "Create Task",
@@ -102,7 +270,90 @@
 					]
 				}
 			},
-			"response": []
+			"response": [
+				{
+					"name": "response",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "X-CSRFToken",
+								"value": "iaKz8E1mFaQS13aMi9Jrvgt6BbQWhfAv",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\r\n    \"title\": \"Task Example 1\",\r\n    \"description\": \"This is a sample task description for demonstration purposes.\",\r\n    \"status\": \"pending\",\r\n    \"priority\": \"medium\",\r\n    \"due_date\": \"2024-12-20\"\r\n\r\n  }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8000/tasks/task/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"tasks",
+								"task",
+								""
+							]
+						}
+					},
+					"status": "Created",
+					"code": 201,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Wed, 11 Dec 2024 10:31:27 GMT"
+						},
+						{
+							"key": "Server",
+							"value": "WSGIServer/0.2 CPython/3.11.5"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Vary",
+							"value": "Accept, origin"
+						},
+						{
+							"key": "Allow",
+							"value": "GET, POST, PUT, DELETE, HEAD, OPTIONS"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "DENY"
+						},
+						{
+							"key": "Content-Length",
+							"value": "21"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "Referrer-Policy",
+							"value": "same-origin"
+						},
+						{
+							"key": "Cross-Origin-Opener-Policy",
+							"value": "same-origin"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"message\": \"created\"\n}"
+				}
+			]
 		},
 		{
 			"name": "Retrieve All Tasks",
@@ -123,7 +374,75 @@
 					]
 				}
 			},
-			"response": []
+			"response": [
+				{
+					"name": "response",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8000/tasks/task/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"tasks",
+								"task",
+								""
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Wed, 11 Dec 2024 10:12:55 GMT"
+						},
+						{
+							"key": "Server",
+							"value": "WSGIServer/0.2 CPython/3.11.5"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Vary",
+							"value": "Accept, origin"
+						},
+						{
+							"key": "Allow",
+							"value": "GET, POST, PUT, DELETE, HEAD, OPTIONS"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "DENY"
+						},
+						{
+							"key": "Content-Length",
+							"value": "632"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "Referrer-Policy",
+							"value": "same-origin"
+						},
+						{
+							"key": "Cross-Origin-Opener-Policy",
+							"value": "same-origin"
+						}
+					],
+					"cookie": [],
+					"body": "[\n    {\n        \"id\": \"da271004-8bb3-4856-bf90-9b4ce3f7700f\",\n        \"assigned_to\": \"mayank@gmail.com\",\n        \"title\": \"tt tt t t tt t\",\n        \"description\": \"ajhauis auica uicaciiahc ahucuac aui\",\n        \"status\": \"completed\",\n        \"priority\": \"high\",\n        \"due_date\": \"2024-12-13\",\n        \"created_at\": \"2024-12-11T12:49:01.120438+05:30\",\n        \"updated_at\": \"2024-12-11T12:49:01.136459+05:30\"\n    },\n    {\n        \"id\": \"f9e39277-b45e-42e7-a400-b637e4d28eed\",\n        \"assigned_to\": \"mayank@gmail.com\",\n        \"title\": \"ajkbcjksa224311535312512152525\",\n        \"description\": \"akcjbacbuasb iauscais\",\n        \"status\": \"pending\",\n        \"priority\": \"high\",\n        \"due_date\": \"2024-12-13\",\n        \"created_at\": \"2024-12-11T13:14:01.439826+05:30\",\n        \"updated_at\": \"2024-12-11T13:14:01.439826+05:30\"\n    }\n]"
+				}
+			]
 		},
 		{
 			"name": "Update Tasks",
@@ -159,7 +478,90 @@
 					]
 				}
 			},
-			"response": []
+			"response": [
+				{
+					"name": "reponse",
+					"originalRequest": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "X-CSRFToken",
+								"value": "iaKz8E1mFaQS13aMi9Jrvgt6BbQWhfAv",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\":\"f4eeead0-7295-4f9b-bd90-a0868d22b90b\",\r\n    \"status\":\"in-progress\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8000/tasks/task/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"tasks",
+								"task",
+								""
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Wed, 11 Dec 2024 10:02:33 GMT"
+						},
+						{
+							"key": "Server",
+							"value": "WSGIServer/0.2 CPython/3.11.5"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Vary",
+							"value": "Accept, origin"
+						},
+						{
+							"key": "Allow",
+							"value": "GET, POST, PUT, DELETE, HEAD, OPTIONS"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "DENY"
+						},
+						{
+							"key": "Content-Length",
+							"value": "338"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "Referrer-Policy",
+							"value": "same-origin"
+						},
+						{
+							"key": "Cross-Origin-Opener-Policy",
+							"value": "same-origin"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"id\": \"f4eeead0-7295-4f9b-bd90-a0868d22b90b\",\n    \"assigned_to\": \"e6ef3097-4c55-4902-8b95-138dfd1ab397\",\n    \"title\": \"ajkbcjksa224311535312512152525\",\n    \"description\": \"akcjbacbuasb iauscais\",\n    \"status\": \"in-progress\",\n    \"priority\": \"high\",\n    \"due_date\": \"2024-12-13\",\n    \"created_at\": \"2024-12-11T13:10:46.760283+05:30\",\n    \"updated_at\": \"2024-12-11T15:32:33.692935+05:30\"\n}"
+				}
+			]
 		},
 		{
 			"name": "Get Single Task",
@@ -180,7 +582,75 @@
 					]
 				}
 			},
-			"response": []
+			"response": [
+				{
+					"name": "response",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8000/tasks/task/f4eeead0-7295-4f9b-bd90-a0868d22b90b",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"tasks",
+								"task",
+								"f4eeead0-7295-4f9b-bd90-a0868d22b90b"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Wed, 11 Dec 2024 10:03:38 GMT"
+						},
+						{
+							"key": "Server",
+							"value": "WSGIServer/0.2 CPython/3.11.5"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Vary",
+							"value": "Accept, origin"
+						},
+						{
+							"key": "Allow",
+							"value": "GET, HEAD, OPTIONS"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "DENY"
+						},
+						{
+							"key": "Content-Length",
+							"value": "318"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "Referrer-Policy",
+							"value": "same-origin"
+						},
+						{
+							"key": "Cross-Origin-Opener-Policy",
+							"value": "same-origin"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"id\": \"f4eeead0-7295-4f9b-bd90-a0868d22b90b\",\n    \"assigned_to\": \"mayank@gmail.com\",\n    \"title\": \"ajkbcjksa224311535312512152525\",\n    \"description\": \"akcjbacbuasb iauscais\",\n    \"status\": \"in-progress\",\n    \"priority\": \"high\",\n    \"due_date\": \"2024-12-13\",\n    \"created_at\": \"2024-12-11T13:10:46.760283+05:30\",\n    \"updated_at\": \"2024-12-11T15:32:33.692935+05:30\"\n}"
+				}
+			]
 		},
 		{
 			"name": "Delete Task",
@@ -208,7 +678,82 @@
 					]
 				}
 			},
-			"response": []
+			"response": [
+				{
+					"name": "response",
+					"originalRequest": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "X-CSRFToken",
+								"value": "iaKz8E1mFaQS13aMi9Jrvgt6BbQWhfAv",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:8000/tasks/task/delete/f4eeead0-7295-4f9b-bd90-a0868d22b90b",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"tasks",
+								"task",
+								"delete",
+								"f4eeead0-7295-4f9b-bd90-a0868d22b90b"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Wed, 11 Dec 2024 10:04:49 GMT"
+						},
+						{
+							"key": "Server",
+							"value": "WSGIServer/0.2 CPython/3.11.5"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Vary",
+							"value": "Accept, origin"
+						},
+						{
+							"key": "Allow",
+							"value": "GET, POST, PUT, DELETE, HEAD, OPTIONS"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "DENY"
+						},
+						{
+							"key": "Content-Length",
+							"value": "26"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "Referrer-Policy",
+							"value": "same-origin"
+						},
+						{
+							"key": "Cross-Origin-Opener-Policy",
+							"value": "same-origin"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"message\": \"Task deleted\"\n}"
+				}
+			]
 		},
 		{
 			"name": "Filter Task by task/< filter > / <value>",
@@ -231,7 +776,77 @@
 					]
 				}
 			},
-			"response": []
+			"response": [
+				{
+					"name": "response",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8000/tasks/task/filter/status/pending",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"tasks",
+								"task",
+								"filter",
+								"status",
+								"pending"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Wed, 11 Dec 2024 10:06:06 GMT"
+						},
+						{
+							"key": "Server",
+							"value": "WSGIServer/0.2 CPython/3.11.5"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Vary",
+							"value": "Accept, origin"
+						},
+						{
+							"key": "Allow",
+							"value": "GET, HEAD, OPTIONS"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "DENY"
+						},
+						{
+							"key": "Content-Length",
+							"value": "316"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "Referrer-Policy",
+							"value": "same-origin"
+						},
+						{
+							"key": "Cross-Origin-Opener-Policy",
+							"value": "same-origin"
+						}
+					],
+					"cookie": [],
+					"body": "[\n    {\n        \"id\": \"f9e39277-b45e-42e7-a400-b637e4d28eed\",\n        \"assigned_to\": \"mayank@gmail.com\",\n        \"title\": \"ajkbcjksa224311535312512152525\",\n        \"description\": \"akcjbacbuasb iauscais\",\n        \"status\": \"pending\",\n        \"priority\": \"high\",\n        \"due_date\": \"2024-12-13\",\n        \"created_at\": \"2024-12-11T13:14:01.439826+05:30\",\n        \"updated_at\": \"2024-12-11T13:14:01.439826+05:30\"\n    }\n]"
+				}
+			]
 		},
 		{
 			"name": "Sort Tasks by task/sort / < field >",
@@ -253,7 +868,76 @@
 					]
 				}
 			},
-			"response": []
+			"response": [
+				{
+					"name": "response",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8000/tasks/task/sort/due_date",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"tasks",
+								"task",
+								"sort",
+								"due_date"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Wed, 11 Dec 2024 10:06:44 GMT"
+						},
+						{
+							"key": "Server",
+							"value": "WSGIServer/0.2 CPython/3.11.5"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Vary",
+							"value": "Accept, origin"
+						},
+						{
+							"key": "Allow",
+							"value": "GET, HEAD, OPTIONS"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "DENY"
+						},
+						{
+							"key": "Content-Length",
+							"value": "632"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "Referrer-Policy",
+							"value": "same-origin"
+						},
+						{
+							"key": "Cross-Origin-Opener-Policy",
+							"value": "same-origin"
+						}
+					],
+					"cookie": [],
+					"body": "[\n    {\n        \"id\": \"da271004-8bb3-4856-bf90-9b4ce3f7700f\",\n        \"assigned_to\": \"mayank@gmail.com\",\n        \"title\": \"tt tt t t tt t\",\n        \"description\": \"ajhauis auica uicaciiahc ahucuac aui\",\n        \"status\": \"completed\",\n        \"priority\": \"high\",\n        \"due_date\": \"2024-12-13\",\n        \"created_at\": \"2024-12-11T12:49:01.120438+05:30\",\n        \"updated_at\": \"2024-12-11T12:49:01.136459+05:30\"\n    },\n    {\n        \"id\": \"f9e39277-b45e-42e7-a400-b637e4d28eed\",\n        \"assigned_to\": \"mayank@gmail.com\",\n        \"title\": \"ajkbcjksa224311535312512152525\",\n        \"description\": \"akcjbacbuasb iauscais\",\n        \"status\": \"pending\",\n        \"priority\": \"high\",\n        \"due_date\": \"2024-12-13\",\n        \"created_at\": \"2024-12-11T13:14:01.439826+05:30\",\n        \"updated_at\": \"2024-12-11T13:14:01.439826+05:30\"\n    }\n]"
+				}
+			]
 		},
 		{
 			"name": "search Task By Title",
@@ -275,7 +959,76 @@
 					]
 				}
 			},
-			"response": []
+			"response": [
+				{
+					"name": "response",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8000/tasks/task/search/tt",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"tasks",
+								"task",
+								"search",
+								"tt"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Wed, 11 Dec 2024 10:08:10 GMT"
+						},
+						{
+							"key": "Server",
+							"value": "WSGIServer/0.2 CPython/3.11.5"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Vary",
+							"value": "Accept, origin"
+						},
+						{
+							"key": "Allow",
+							"value": "GET, HEAD, OPTIONS"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "DENY"
+						},
+						{
+							"key": "Content-Length",
+							"value": "317"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "Referrer-Policy",
+							"value": "same-origin"
+						},
+						{
+							"key": "Cross-Origin-Opener-Policy",
+							"value": "same-origin"
+						}
+					],
+					"cookie": [],
+					"body": "[\n    {\n        \"id\": \"da271004-8bb3-4856-bf90-9b4ce3f7700f\",\n        \"assigned_to\": \"mayank@gmail.com\",\n        \"title\": \"tt tt t t tt t\",\n        \"description\": \"ajhauis auica uicaciiahc ahucuac aui\",\n        \"status\": \"completed\",\n        \"priority\": \"high\",\n        \"due_date\": \"2024-12-13\",\n        \"created_at\": \"2024-12-11T12:49:01.120438+05:30\",\n        \"updated_at\": \"2024-12-11T12:49:01.136459+05:30\"\n    }\n]"
+				}
+			]
 		}
 	]
 }
